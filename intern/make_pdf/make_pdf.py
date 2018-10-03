@@ -56,12 +56,17 @@ class PPTX2PDF():
     #------------------------------------------------------------------------------
 
     def main(self):
-        self.walk_dir(self.args.dir)
+        target_dir = self.args.dir 
+        if not os.path.exists(target_dir):
+            raise SystemError("Target directory arg does not exist: {}".format(target_dir))
+
+        if not os.path.isdir(target_dir):
+            raise SystemError("Target directory arg is not a directory: {}".format(target_dir))
+
+        self.walk_dir(target_dir)
 
 
-def format_folder():
-
-    dir_path = "C:\\Users\\soffer\\Desktop\\Chinese_Courses_Student_Version"
+def format_folder(dir_path):
 
     for root, dirs, files in os.walk(dir_path, topdown=False):
         for name in files:
@@ -76,9 +81,7 @@ def format_folder():
                 shutil.move(target,os.path.join(temp,os.path.basename(target)))
 
 
-def remove_pptx():
-
-    dir_path = "C:\\Users\\soffer\\Desktop\\Chinese_Courses_Student_Version"
+def remove_pptx(dir_path):
 
     for root, dirs, files in os.walk(dir_path, topdown=False):
         for name in files:
@@ -95,8 +98,19 @@ def remove_pptx():
             #    os.mkdir(temp)
             #    shutil.move(target,os.path.join(temp,os.path.basename(target)))
 
+def main():
+    target_dir = sys.argv[1]
+
+    if not os.path.exists(target_dir):
+        raise SystemError("Target directory arg does not exist: {}".format(target_dir))
+
+    if not os.path.isdir(target_dir):
+        raise SystemError("Target directory arg is not a directory: {}".format(target_dir))
+
+    format_folder(target_dir)
+
 
 if __name__ == "__main__":
-    #PPTX2PDF().main()
+    PPTX2PDF().main()
     #format_folder()
-    remove_pptx()
+    #emove_pptx()

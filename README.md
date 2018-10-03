@@ -10,7 +10,7 @@ Select a folder and compress all of its contents according to flags sent to the 
 
 ### Usage:
 
-`python make_zip.py --d /test --m pdf`
+`python make_zip.py --d <directory> --m pdf`
 
 The `--d` flag is for the target directory and the `--m` flag is for the file 'mode' (ex: pdf, pptx). When left blank, the mode is 'all', which compresses all of the contents. Another option is to pass `--m !pdf` which will compress all of the files that are not pdf as an example.
 
@@ -23,3 +23,13 @@ The `--d` flag is for the target directory and the `--m` flag is for the file 'm
 | /	            | directories only | 
 | \!pdf.        | not pdf files   |  
 | \!/           | not directories |  
+
+## Convert all .pptx to .pdf within a folder
+
+Select a root folder and all .pptx within that folder are then converted to .pdf. Use the file remover tool to get rid of .pptx if necessary.
+
+### Usage
+
+`python make_pdf.py --d <directory>`
+
+###### Image credit goes to https://ei.marketwatch.com
