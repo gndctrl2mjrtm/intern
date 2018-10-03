@@ -1,7 +1,7 @@
 ![alt text](https://ei.marketwatch.com/Multimedia/2013/08/30/Photos/MG/MW-BH721_pf_10t_20130830201010_MG.jpg?uuid=c4aed170-11d1-11e3-b648-002128040cf6)
 
 
-# Python Intern
+# PyIntern
 #### "Automate everything interns do except for bringing coffee, they still need to do something!"
 Scripts for Office Automation Tasks
 
