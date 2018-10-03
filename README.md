@@ -2,6 +2,7 @@
 
 
 # Python Intern
+#### "Automate everything interns do except for bringing coffee, they still need to do something!"
 Scripts for Office Automation Tasks
 
 ## Compress files within folder to zip files
@@ -24,7 +25,7 @@ The `--d` flag is for the target directory and the `--m` flag is for the file 'm
 | \!pdf.        | not pdf files   |  
 | \!/           | not directories |  
 
-## Convert all .pptx to .pdf within a folder
+## Convert all .pptx to .pdf within a root folder
 
 Select a root folder and all .pptx within that folder are then converted to .pdf. Use the file remover tool to get rid of .pptx if necessary.
 
@@ -32,4 +33,4 @@ Select a root folder and all .pptx within that folder are then converted to .pdf
 
 `python make_pdf.py --d <directory>`
 
-###### Image credit goes to https://ei.marketwatch.com
+###### Image credit goes to https://marketwatch.com
